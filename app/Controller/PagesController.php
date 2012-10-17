@@ -80,6 +80,12 @@ class PagesController extends AppController {
 
 	public function sendemail() {
 		App::uses('CakeEmail', 'Network/Email');
+
+		$email = new CakeEmail();
+		$email->from(array('kimcity@gmail.com' => 'My Site'));
+		$email->to('kimsia@storyzer.com');
+		$email->subject('About');
+		$email->send('My message');
 		$this->Session->setFlash('success');
 		$this->redirect('/pages/test');
 	}
