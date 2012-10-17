@@ -52,6 +52,9 @@ class PagesController extends AppController {
  * @return void
  */
 	public function display() {
+
+
+
 		$path = func_get_args();
 
 		$count = count($path);
@@ -69,7 +72,13 @@ class PagesController extends AppController {
 		if (!empty($path[$count - 1])) {
 			$title_for_layout = Inflector::humanize($path[$count - 1]);
 		}
+		$this->layout = 'simple';
+
 		$this->set(compact('page', 'subpage', 'title_for_layout'));
 		$this->render(implode('/', $path));
+	}
+
+	public function sendemail() {
+		App::uses('CakeEmail', 'Network/Email');
 	}
 }
