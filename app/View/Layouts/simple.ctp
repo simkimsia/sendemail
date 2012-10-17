@@ -34,7 +34,7 @@
 	<div id="wrapper">
 
     	<div id="header">
-        	
+        	<?php echo $this->Session->flash(); ?>
 		</div>
         
         <div id="inner-wrap">

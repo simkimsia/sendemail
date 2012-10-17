@@ -80,5 +80,7 @@ class PagesController extends AppController {
 
 	public function sendemail() {
 		App::uses('CakeEmail', 'Network/Email');
+		$this->Session->setFlash('success');
+		$this->redirect('/pages/test');
 	}
 }
