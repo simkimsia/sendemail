@@ -1,0 +1,437 @@
+html,
+body{
+	height:100%;
+	margin:0;
+}
+body{
+	height: 100%;
+	min-width:960px;
+	color:#939598;
+	font:12px/18px Arial, Helvetica, sans-serif;
+	background:#fff;
+}
+img{border-style:none;}
+*{
+	-o-transition:color .3s;
+	-ms-transition:color .3s;
+	-moz-transition:color .3s;
+	-webkit-transition:color .3s;
+	transition:color .3s;
+}
+form,
+fieldset{
+	margin:0;
+	padding:0;
+	border-style:none;
+}
+a{
+	text-decoration:none;
+	color:#ffc20e;
+}
+a:hover{text-decoration:underline;}
+/******************************* Wrapper Start *************************/
+#wrapper{
+	min-height:100%; 
+	width:100%; 
+	overflow:hidden;
+	position:relative;
+}
+/******************************* Wrapper END *************************/
+
+/******************************* Header START *************************/
+#header { 
+	margin-left: auto; 
+	margin-right: auto; 
+	width: 960px; 
+	display: block; 
+	text-align: left;
+	clear: both;
+}
+
+/* this only determines position and size of talkbubble */
+#header .talkbubble{
+	display: inline-block;
+	position: relative;
+	top: 10px; left: 0; right: 0; bottom: 0;
+	height: 47px;	
+	width: 889px;
+	float: right;	
+}
+.title{
+	color: #FFC20E;
+	font-size: 25px;
+	line-height: 45px;
+	padding-left: 13px;	
+}
+#button_panel {
+	float: right; 
+	padding:13px 13px;
+	min-height: 51px;
+}
+
+.spacer {
+	background-image: url(../../img/spacer.png);
+	height: 7px;
+	position: relative;
+	
+}
+/*** Header speechbubble ***/
+
+.bot50x50{ 
+	display: inline-block;
+	text-indent:-9999px;
+	background:url("../../img/storybot-50x50-1.png") no-repeat;
+	background-position:-10px -70px;
+	width:50px; height:50px; 
+	position: relative;
+ 	top: 10px; left: 0; right: 0; bottom: 0;
+    
+ }
+ /**** to allow fade effect when hover over ****/
+ .bot50x50 span {
+ 	display: block;
+ 	width:50px; height:50px;
+ 	position: relative;
+ 	top: 0; left: 0; right:0;bottom: 0;
+	background: url("../../img/storybot-50x50-1.png") no-repeat;
+    background-position: -10px -10px; 
+	opacity: 0;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    -ms-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+ }
+.bot50x50:hover span { 
+	opacity: 1;
+}
+
+/******** talkbubble_left **************/
+.gradient_header_talkbubble {
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffffff 0%, #f8f8f9 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f8f8f9)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ffffff 0%,#f8f8f9 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ffffff 0%,#f8f8f9 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ffffff 0%,#f8f8f9 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #ffffff 0%,#f8f8f9 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f8f8f9',GradientType=0 ); /* IE6-9 */
+}
+.talkbubble_left {
+    position: relative;
+    background: #white;
+    border: 1px solid #DCDDDE;
+}
+.talkbubble_left:after, .talkbubble_left:before {
+    right: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    top: 50%;
+}
+.talkbubble_left:after {
+    border-top: 5px solid transparent;
+    border-right: 10px solid #FBFBFB;
+    border-bottom: 5px solid transparent;
+    margin-top: -5px;
+}
+.talkbubble_left:before {
+    border-top: 6px solid transparent;
+    border-right: 11px solid #DCDDDE;
+    border-bottom: 6px solid transparent;
+    margin-top: -6px;
+}
+
+
+/******** buttons in the speech bubble ********/
+.separator13 {
+	display: inline-block;
+	width: 10px;
+}
+.save82x20{ 
+	background:url("../../img/btn-save.png") top left no-repeat; 
+	display: inline-block;
+	width:82px; height:20px; background-position:0 0; }
+.save82x20:hover{ background-position:0 -20px; }
+.save82x20:active{ background-position:0 -40px; }
+
+.publish82x20{ 
+	background:url("../../img/btn-publish.png") top left no-repeat;
+	display: inline-block;
+	width:82px; height:20px; background-position:0 -40px; 
+}
+.publish82x20:active{ background-position:0 0; }
+.publish82x20:hover{ background-position:0 -20px; }
+
+.addpages82x20{ 
+	background:url("../../img/btn-addpages.png") top left no-repeat;
+	display: inline-block;
+	width:82px; height:20px; background-position:0 -40px; 
+	position: relative;
+ 	top: 0; left: 0; right: 0; bottom: 0;
+}
+.addpages82x20:active{ background-position:0 0; }
+.addpages82x20:hover{ background-position:0 -20px; }
+
+/* this is above the .addpages82x20 */
+.input82x20{
+ 	width:82px;
+ 	height:20px;
+}
+
+.preview82x20{
+	background:url("../../img/btn-preview.png") top left no-repeat;
+	display: inline-block;
+	width:82px; height:20px; background-position:0 -40px; 
+}
+.preview82x20:active{ background-position:0 0; }
+.preview82x20:hover{ background-position:0 -20px; }
+
+.settings20x20{ 
+	position: relative;
+	background:url("../../img/btn-settings.png") top left no-repeat; 
+	display: inline-block;
+	width:20px; height:20px; background-position:0 -40px;
+}
+.settings20x20:active{ width:20px; height:20px; background-position:0 0; }
+.settings20x20:hover{ width:20px; height:20px; background-position:0 -20px; }
+
+.settings_talkbubble_top {
+    position: absolute;
+    top:30px;
+    right: -23px;
+    background: white;
+    border: 1px solid #DCDDDE;
+    z-index: 9999;
+    height: 50px;	
+	width: 160px;   
+}
+.settings_talkbubble_top:after, .settings_talkbubble_top:before {
+    bottom: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    left: 80%;
+}
+.settings_talkbubble_top:after {
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid white;
+    border-left: 5px solid transparent;
+    margin-left: -5px;
+}
+.settings_talkbubble_top:before {
+    border-right: 6px solid transparent;
+    border-bottom: 11px solid #DCDDDE;
+    border-left: 6px solid transparent;
+    margin-left: -6px;
+}
+
+.logout-link {
+	color:#BCBEC0;
+	text-decoration: none;
+}
+.logout-link:hover {
+	color:#FFC20E;
+	text-decoration: none;
+}
+
+.bubble-list-readonly {
+	position: relative;
+	left:15px;
+	top:12px;
+
+	text-align: left;	
+}
+
+/*** Header speechbubble END ***/
+
+
+/******************************* Header END *************************/
+
+/******************************* content START *************************/
+#inner-wrap { 
+	margin-left: auto; 
+	margin-right: auto; 
+	min-height:90%;  /** not 100% because we want to see footer **/
+	width:960px;
+	display: block;
+	position:relative;
+	height: auto !important;
+    height: 100%;
+    margin-bottom: 30px;
+}
+
+.over {
+	/** dnd dragenter **/
+	background-color: #f8f8f9;
+}
+.red_star {
+	color: #ff0000;
+	font-size:14px;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-weight: bold;
+}
+
+.input01, .textarea01{
+	border: 1px solid #bcbdc0;
+	width: 100%;
+	color: #58595B;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+/*
+select {
+  -webkit-appearance: button;
+  -webkit-border-radius: 2px;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  -webkit-padding-end: 20px;
+  -webkit-padding-start: 2px;
+  -webkit-user-select: none;
+  -moz-appearance: button;
+  -moz-border-radius: 2px;
+  -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  -moz-padding-end: 20px;
+  -moz-padding-start: 2px;
+  -moz-user-select: none;
+  background-image: url(../../img/down_arrow_select.jpg), 
+    -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5),
+    -moz-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5),
+    ;
+  background-position: center right;
+  background-repeat: no-repeat;
+  border: 1px solid #AAA;
+  color: #555;
+  font-size: inherit;
+  margin: 0;
+  overflow: hidden;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-overflow: ellipsis;
+  white-space: nowrap;}
+  
+.styled-select select{
+   background: transparent;
+   width: 268px;
+   padding: 5px;
+   font-size: 12px;
+   font-family: Arial, Helvetica, sans-serif;
+   border: 1px solid #bcbdc0;
+   height: 34px;
+}
+
+.styled-select {
+   width: 240px;
+   height: 34px;
+   overflow: hidden;
+   background: url('../../img/down_arrow_select.jpg') no-repeat right white;
+}
+
+/* story setting button */
+.btn-storysetting{
+	width:12px;
+	height:12px;
+	overflow:hidden;
+	text-indent:-9999px;
+	background:url(../../img/btn-storysetting12x12.png) no-repeat;
+	position:absolute;
+	right:5px;
+	top:5px;
+    display:inline-block;
+}
+
+/* close button */
+.btn-close{
+	width:12px;
+	height:12px;
+	overflow:hidden;
+	text-indent:-9999px;
+	background:url(../../img/btn-close.png) no-repeat;
+	position:absolute;
+	right:5px;
+	top:5px;
+    display:inline-block;
+}
+
+.btn-close span {
+    position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	background: url(../../img/btn-close.png) no-repeat;
+    background-position: 0 -12px;
+	opacity: 0;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    -ms-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+
+.btn-close:hover span {
+    opacity: 1;
+}
+
+
+/******************************* content END *************************/
+
+/******************************* Footer START *************************/
+#footer{
+	position:absolute;
+	display:block;
+	bottom:0;
+	width:100%;
+	height:30px;
+	margin-top:-31px;
+	border-top:1px solid #dcddde;
+	color:#bcbec0;
+}
+#footer .left {
+	float:left;
+	width: 50%;
+}
+#footer .right {
+	float:left;
+	width: 50%;
+}
+#footer .holder{
+	padding:5px 0 0;
+	width:960px;
+	margin:0 auto;
+	overflow:hidden;
+}
+#footer .bottom-nav{
+	display: inline-block;
+	padding:0;
+	margin:0 auto;
+	list-style:none;
+	font-size:12px;
+	line-height:18px;
+}
+.bottom-nav li{
+	display: inline-block;
+	float:left;
+	position: relative;
+	padding:0 5px 0 6px;
+	background:url(../../img/bullet3.png) 0 8px no-repeat;
+}
+.bottom-nav li:first-child{
+	padding-left:0;
+	background:none;
+}
+#footer .copy{
+	float:left;
+	padding:0 5px 0 0;
+}
+
+
+#footer a:hover {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+/******************************* Footer END *************************/

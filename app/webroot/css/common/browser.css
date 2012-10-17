@@ -1,0 +1,125 @@
+#browser-screen {
+	
+	left: 0px; 
+	top: 0px; 
+	position: absolute;
+	display : block;
+	width: 100%;
+	height: 100%;
+	background: #ffffff; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  #ffffff 0%, #4c4c4c 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#ffffff), color-stop(100%,#4c4c4c)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #ffffff 0%,#4c4c4c 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  #ffffff 0%,#4c4c4c 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  #ffffff 0%,#4c4c4c 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  #ffffff 0%,#4c4c4c 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#4c4c4c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	
+}
+#browser-box{
+	background: rgba(220, 220, 220, 0.75);
+	border: 1px solid #eeeeee; 
+	left: 50%; 
+	top: 50%; 
+	width: 315px; 
+	height: 275px; 
+	text-align: center; 
+	margin-top: -133px; 
+	margin-left: -157px; 
+	position: absolute; 
+	z-index: 999;
+	border-radius: 8px;
+}
+#box-title{ 
+	font-family:Arial;
+	font-size:28px;
+	text-align: left;
+	color: #fff;
+	float:left;
+	line-height:60px;
+	font-weight: bold;
+	padding-left: 10px;
+	
+}
+#box-face , #box-face{
+	width:40px; 
+	height: 40px;
+	margin: 10px 0px 0px 10px; 
+	display:inline; 
+	float: left;
+	clear: both;
+	background-image: url(../../img/popup-face40x40.png)
+}
+#box-overlay-message-talkbubble-top {
+	margin:0px auto;
+    position: relative;
+    background: white;
+    border: 1px solid white;	
+	border-radius: 6px;
+	width:85%;
+	clear: both;   
+	padding:10px;
+}
+#box-overlay-message-talkbubble-top:after, #box-overlay-message-talkbubble-top:before {
+    bottom: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    left: 6%;
+}
+#box-overlay-message-talkbubble-top:after {
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid white;
+    border-left: 5px solid transparent;
+    margin-left: -5px;
+}
+#box-overlay-message-talkbubble-top:before {
+    border-right: 6px solid transparent;
+    border-bottom: 11px solid white;
+    border-left: 6px solid transparent;
+    margin-left: -6px;
+}
+
+
+#browser-box #contentArea{
+	background-color: #fff;
+	border-radius: 8px;
+	width:85%;
+	clear: both;
+	margin:0px auto;
+	padding:10px;
+}
+
+#browser-box #contentArea1{
+	font-size: 12px;
+	color: #959398;
+}
+
+
+/****************************** MenuLoginPopup **********************************/
+ul#menuLoginPopup {
+	list-style:none;
+	width:294px;
+	padding-left:10px;
+}
+ul#menuLoginPopup li a {	
+	float:left;
+	height:25px;
+	background-image:url('../../img/btns-login-popup.png');
+	background-repeat: no-repeat;
+	text-indent:-999px;
+}
+
+ul#menuLoginPopup li a.close {
+	width:294px;
+	background-position:0 -100;
+}
+ul#menuLoginPopup li a.close:hover {
+	width:294px;
+	background-position:0px -129px;
+}
+
+/****************************** Menu End **********************************/
