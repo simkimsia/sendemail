@@ -13,7 +13,9 @@ pmip
 *.sublime-project
 *.sublime-workspace
 tags
-
+app/Config/email.php
+app/Config/database.php
+app/Config/core.php
 
 /plugins
 /vendors
