@@ -82,10 +82,28 @@ class PagesController extends AppController {
 		App::uses('CakeEmail', 'Network/Email');
 
 		$email = new CakeEmail();
-		$email->from(array('kimcity@gmail.com' => 'My Site'));
-		$email->to('kimsia@storyzer.com');
+		$email->from(array('abc@gmail.com' => 'My Site'));
+		$email->to('abc@gmail.com');
 		$email->subject('About');
+
+		$email->attachments(array(
+		    'coverletter.pdf' => array(
+
+		        'file' => PATH_TO_SAMPLEDOCS . 'Q12-2009 - Cover Letter for Fast Return to WCDMA after Call Release.pdf',
+		        'mimetype' => 'application/pdf',
+		        'contentId' => 'my-unique-id-cover'
+		    ),
+		    'quotation.pdf' => array(
+		        'file' => PATH_TO_SAMPLEDOCS . 'Q12-2009 - Quotation for Fast Return to WCDMA after Call Release.pdf',
+		        'mimetype' => 'application/pdf',
+		        'contentId' => 'my-unique-id-quotation'
+		    )
+		));
+
 		$email->send('My message');
+
+
+
 		$this->Session->setFlash('success');
 		$this->redirect('/pages/test');
 	}
